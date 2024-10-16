@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Hotel Booking" />
+    <title>LOTEL</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=El+Messiri:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="lh-loader">
+      <span class="loader"></span>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <div class="lh-header">
+        <div class="container">
+          <div class="row">
+            <nav class="navbar navbar-expand-lg">
+              <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="logo" class="lh-logo" />
+              </a>
+              <button
+                class="navbar-toggler shadow-none"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample"
+                aria-controls="offcanvasExample"
+              >
+                <i class="fa-solid fa-bars text-white"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="index.html">
+                      Home
+                    </a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="about.html">
+                      About
+                    </a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#">
+                      Get App
+                      <i class="ri-arrow-down-s-line"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="#"> Support </a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="contact.html"> Contact </a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                    >
+                      <i class="fa-solid fa-user fa-lg"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="login.html">LogIn</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="signup.html">SignUp</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                    >
+                      <img
+                        src="images/english.png"
+                        style="width: 35px; height: 20px"
+                      />
+                      English
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <img
+                            src="images/france.png"
+                            style="width: 35px; height: 20px"
+                          />
+                          France
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile-menu -->
+    <div class="lh-side-cart lh-mobile-menu">
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel"
+      >
+        <div class="lh-menu-title">
+          <span class="menu-title">My Menu</span>
+          <button
+            class="lh-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
+            ×
+          </button>
+        </div>
+        <div class="lh-menu-inner">
+          <div class="lh-menu-content">
+            <ul>
+              <li class="dropdown drop-list">
+                <a href="home.html" class="dropdown-list">Home</a>
+              </li>
+              <li class="dropdown drop-list">
+                <a href="about.html" class="dropdown-list">About</a>
+              </li>
+              <li class="dropdown drop-list">
+                <a href="#" class="dropdown-list">Get App</a>
+              </li>
+              <li class="dropdown drop-list">
+                <a href="support.html" class="dropdown-list">Support</a>
+              </li>
+              <li class="dropdown drop-list">
+                <a href="contact.html" class="dropdown-list">Contact</a>
+              </li>
+              <li class="dropdown drop-list">
+                <a
+                  class="dropdown-list"
+                  data-bs-toggle="collapse"
+                  href="#collapseExample"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseExample"
+                >
+                  <i class="fa-solid fa-user fa-lg"></i>
+                </a>
+                <ul class="collapse" id="collapseExample">
+                  <li><a href="login.html">LogIn</a></li>
+                  <li><a href="signup.html">SignUp</a></li>
+                </ul>
+              </li>
+              <li class="dropdown drop-list">
+                <a
+                  class="dropdown-list"
+                  data-bs-toggle="collapse"
+                  href="#collapseExample1"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseExample"
+                >
+                  <img
+                    src="images/english.png"
+                    style="width: 35px; height: 20px"
+                  />
+                  English
+                </a>
+                <ul class="collapse" id="collapseExample1">
+                  <li>
+                    <a href="#">
+                      <img
+                        src="images/france.png"
+                        style="width: 35px; height: 20px"
+                      />
+                      France
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Banner -->
+    <section class="section-banner">
+      <div class="row banner-image">
+        <div class="banner-overlay"></div>
+        <div class="banner-section">
+          <div class="lh-banner-contain">
+            <h2>Privacy Policy</h2>
+            <div class="lh-breadcrumb">
+              <h5>
+                <span class="lh-inner-breadcrumb">
+                  <a href="index.html">Home</a>
+                </span>
+                <span> / </span>
+                <span>
+                  <a href="#">Privacy Policy</a>
+                </span>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- policy -->
+    <section class="section-policy padding-tb-100">
+      <div class="container">
+        <div class="banner">
+            <h2 class="mb-3" style="text-align: left">Major Disruptive Events Policy</h2>
+          </div>
+       <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex repellendus laudantium accusantium quas eius praesentium fugit, consequuntur aut tempore error iure modi et voluptas similique, laboriosam quidem. Minus, mollitia. Id?</p>
+       <p class="mb-3">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus minima necessitatibus nesciunt doloremque, harum, recusandae veritatis quia non pariatur esse laborum, doloribus nulla ad omnis sapiente? Eaque dignissimos non molestias!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eveniet ex laboriosam, sit, facere at hic amet, sed aliquam ab neque consequatur facilis corporis. Cum dolore reiciendis aperiam facere consectetur!
+       </p>
+       <h3>Examples of common events not covered by this policy include:</h3>
+       <ul>
+        <li>Events that impact a guest or their ability to travel, but not the reservation location</li>
+        <li>Unexpected injury or illness</li>
+        <li>Government obligations like jury duty or court appearances</li>
+        <li>Cancellation or rescheduling of an event for which the reservation was made</li>
+       </ul>
+       <p class="mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex repellendus laudantium accusantium quas eius praesentium fugit, consequuntur aut tempore error iure modi et voluptas similique, laboriosam quidem. Minus, mollitia. Id?</p>
+       <p class="mb-3">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus minima necessitatibus nesciunt doloremque, harum, recusandae veritatis quia non pariatur esse laborum, doloribus nulla ad omnis sapiente? Eaque dignissimos non molestias!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eveniet ex laboriosam, sit, facere at hic amet, sed aliquam ab neque consequatur facilis corporis. Cum dolore reiciendis aperiam facere consectetur!
+       </p>
+      </div>
+    </section>
+
+    <div class="section-subscribe pt-5 pb-5">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-lg-7 d-flex wow fadeInDown"
+            data-wow-duration="1s"
+            data-wow-offset="200"
+          >
+            <div class="icon-subscribe">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="content-subscribe">
+              <h2 class="text-white">Join our adventurous community!</h2>
+              <p>
+                Sign up to our newsletter for deals, inspo and other travel
+                treats!
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-lg-5 wow fadeInDown"
+            data-wow-duration="1s"
+            data-wow-offset="200"
+          >
+            <div class="lh-social-media">
+              <div class="lh-footer-social">
+                <form
+                  class="lh-control-footer d-flex position-relative"
+                  role="search"
+                >
+                  <div
+                    class="lh-control-inner-icons d-flex justify-content-center align-items-center"
+                  >
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </div>
+                  <input
+                    class="form-control shadow-none me-4"
+                    type="search"
+                    placeholder="Subscribe..."
+                    aria-label="Search"
+                  />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-top-section">
+          <div class="row">
+            <div class="col-lg-4 col-12">
+              <div class="">
+                <a class="navbar-brand" href="index.html">
+                  <img src="images/logo.png" alt="logo" class="lh-logo" />
+                </a>
+                <p class="mt-4 text-white fs-6">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ducimus, eum. Repellendus incidunt ex maiores magni sapiente.
+                </p>
+              </div>
+              <div class="lh-follow-social mt-4">
+                <div class="footer-logo-image">
+                  <a href="#"
+                    ><img src="images/facebook.png" alt="facebook"
+                  /></a>
+                  <a href="#"><img src="images/twitter.png" alt="twitter" /></a>
+                  <a href="#"
+                    ><img src="images/instagram.png" alt="instagram"
+                  /></a>
+                  <a href="#"
+                    ><img src="images/linkedin.png" alt="linkedin"
+                  /></a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-2 col-md-6 rs-pb-24 p-991 order-lg-1 order-md-2 order-2"
+            >
+              <div class="lh-footer-cols-contain">
+                <div class="lh-footer-heading">
+                  <h4 class="text-white">Explore</h4>
+                </div>
+                <ul>
+                  <li>
+                    <code>*</code>
+                    <a href="index.html">Home</a>
+                  </li>
+                  <li>
+                    <code>*</code>
+                    <a href="about.html">About</a>
+                  </li>
+                  <li>
+                    <code>*</code>
+                    <a href="login-partner.html">Be Partner</a>
+                  </li>
+                  <li>
+                    <code>*</code>
+                    <a href="contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="col-lg-2 col-md-6 rs-pb-24 p-991 order-lg-1 order-md-2 order-2"
+            >
+              <div class="lh-footer-cols-contain">
+                <div class="lh-footer-heading">
+                  <h4 class="text-white">Quick Links</h4>
+                </div>
+                <ul>
+                  <li>
+                    <code>*</code>
+                    <a href="privacy.html">Privacy policy</a>
+                  </li>
+                  <li>
+                    <code>*</code>
+                    <a href="faqs.html">FAQs</a>
+                  </li>
+                  <li>
+                    <code>*</code>
+                    <a href="support.html">Support</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 col-md-6 rs-pb-24 order-lg-3 order-md-3 order-3"
+            >
+              <div class="lh-footer-cols-contain">
+                <div class="lh-footer-heading">
+                  <h4 class="text-white">Contact Information</h4>
+                </div>
+                <div class="lh-footer-contact-infoemation">
+                  <ul>
+                    <li class="lh-information">
+                      <h5 class="heading">Location</h5>
+                      <span>Moroco</span>
+                    </li>
+                    <li class="lh-information">
+                      <h5 class="heading">Email</h5>
+                      <span>lotel@test.com</span>
+                    </li>
+                    <li class="lh-information">
+                      <h5 class="heading">Phone No</h5>
+                      <span>+0000000000000</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom-copy">
+          <span
+            >Copyright @ <span id="copyright_year"></span>
+            <a href="https://topbuziness.com/">Top Business</a> All Rights
+            Reserved</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- Tap to top -->
+    <a href="#" class="back-to-top result-placeholder">
+      <i class="fa-solid fa-angles-up mt-2"></i>
+    </a>
+
+    <!-- Plugins JS -->
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script>
+      new WOW().init();
+    </script>
+  </body>
+</html>
