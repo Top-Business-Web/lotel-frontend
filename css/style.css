@@ -5315,7 +5315,7 @@ h5.lh-blog-details-heding {
 }
 .btn-login:hover,
 .btn-register:hover{
-    background-color: black;
+    background-color: var(--second-color);
 }
 .area-login .test,
 .area-account .test{
@@ -5325,7 +5325,7 @@ h5.lh-blog-details-heding {
 }
 .area-login a,
 .area-account a{
-    color: black;
+    color: var(--second-color);
 }
 .area-login a:hover,
 .area-account a:hover{
@@ -5336,6 +5336,32 @@ h5.lh-blog-details-heding {
 }
 .login-forget a:hover{
   color: var(--main-color);
+}
+.area-login .test,
+.area-account .test{
+    display: inline-block;
+    width: 45.5%;
+    border: 1px solid gainsboro;
+}
+.google-accou{
+    background-color: #D85040;
+}
+.area-account .google-accou,
+.area-login .google-accou{
+    width: 90px;
+    height: 40px;
+    color: white;
+    margin: 20px 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+}
+.area-login .google-accou:hover,
+.area-account .google-accou:hover{
+    color: white;
+    opacity: 0.7;
 }
 
 /* details hotel */
@@ -5349,7 +5375,7 @@ h5.lh-blog-details-heding {
   border-radius: 10px;
 }
 .location{
-  margin: 70px 0;
+  margin: 70px 0 0 0;
 }
 .location .banner h2{
   text-align: left;
