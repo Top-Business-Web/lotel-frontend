@@ -5,6 +5,18 @@ $(function(){
     $(window).on('load',function(){
         $('.lh-loader').css({'display': 'none'});
     });
+
+    //   profile
+
+$('.show-account').on('click', function (){
+
+    $(this).addClass('active').siblings().removeClass('active');
+
+    $('.content-list > div').hide();
+
+    $($(this).data('content')).fadeIn();
+});
+
     
     
     // blogs 
@@ -176,6 +188,5 @@ $('.main-slider').slick({
     centerMode: true,
     focusOnSelect: true
   });
-
 
 });
