@@ -863,7 +863,7 @@ footer .footer-bottom-copy span a {
 /* Common */
 body {
   font-family: "Tajawal", sans-serif;
-  font-size: 14px;
+  /* font-size: 14px; */
   font-weight: 400;
   color: #777;
   line-height: 26px;
@@ -886,11 +886,14 @@ a {
   text-decoration: none;
   margin-bottom: 0;
   font-family: "Tajawal", sans-serif;
-  font-size: 18px;
+  /* font-size: 18px; */
   color: #000;
   font-weight: 300;
   line-height: 26px;
   letter-spacing: 0.03rem;
+}
+.form-label{
+  color: black;
 }
 
 /* h1,
@@ -4858,6 +4861,7 @@ h5.lh-blog-details-heding {
 }
 .btn-all{
   background-color: var(--main-color);
+  border: none;
   padding: 10px 30px;
   border-radius: 5px;
   color: white;
@@ -5436,6 +5440,9 @@ h5.lh-blog-details-heding {
 
 /* profile page */
 
+.show-account td{
+  padding: 20px;
+}
 table tr.active{
   background-color: var(--main-color);
   color: white;
@@ -5444,12 +5451,7 @@ table tr{
   cursor: pointer;
 }
 .icon-account{
-  display: inline-flex;
-  width: 30px;
-  height: 30px;
   margin-right: 10px;
-  justify-content: center;
-  align-items: center;
 }
 .btn-view{
   width: 70px;
@@ -5644,3 +5646,67 @@ table tr{
 .loading .gear.two {
   -webkit-animation: anticlockwise 3s linear infinite;
 }
+
+/* review */
+.star{
+  color: orange;
+}
+.write-review{
+  display: flex;
+  flex-direction: column;
+}
+.star-area{
+  display: flex;
+  justify-content: flex-start;
+}
+.star-area input{
+  display: none;
+}
+.star-area label{
+  font-size: 20px;
+  margin: 3px;
+  color: gainsboro;
+  float: right;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.star-area input:checked ~ label{
+  color: orange;
+}
+.write-review .review{
+  border: 1px solid #DDDDDD;
+  border-radius: 5px;
+}
+.write-review textarea{
+  height: 150px;
+}
+.write-review .review:focus{
+  border: 1px solid var(--main-color);
+  outline: none;
+}
+ .card-dashboard{
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 15%);
+  padding: 15px;
+ }
+ .icon-dashboard{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ .icon-dashboard svg{
+  color: white;
+  font-size: 25px;
+ }
+ .icon-color1{
+  background-color: var(--second-color);
+ }
+ .image-profile img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+ }
