@@ -17,6 +17,13 @@ $('.show-account').on('click', function (){
     $($(this).data('content')).fadeIn();
 });
 
+
+$('.close-shop-whish').click(function (){
+
+    $($(this).data('close')).fadeOut();
+});
+
+
     
     
     // blogs 
@@ -188,5 +195,7 @@ $('.main-slider').slick({
     centerMode: true,
     focusOnSelect: true
   });
+
+
 
 });

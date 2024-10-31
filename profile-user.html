@@ -22,10 +22,29 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
 
+    <!-- datatable -->
+
+    
     <link rel="stylesheet" href="css/style.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css" integrity="sha512-EZSUkJWTjzDlspOoPSpUFR0o0Xy7jdzW//6qhUkoZ9c4StFkVsp9fbbd0O06p9ELS3H486m4wmrCELjza4JEog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
+    <!-- <style>
+      .rounded-table {
+        overflow: hidden; /* Hides anything outside the border */
+      }
+      
+      .rounded-top {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+      
+      .rounded-bottom {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+      
+    </style> -->
   </head>
 
   <body>
@@ -236,14 +255,15 @@
       </div>
     </section>
 
+
     <!-- content my account -->
     <div class="my-account bg-white pt-5 pb-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-12">
-                    <table class="table border rounded account-list">
-                        <tbody>
-                          <tr class="show-account active" data-content=".content-one">
+                    <table class="table border rounded account-list rounded-table">
+                        <tbody class="reduced-border">
+                          <tr class="show-account active rounded-top" data-content=".content-one">
                             <td>
                                 <span class="icon-account"><i class="fa-solid fa-table-cells-large fs-5"></i></span>
                                 <span class="fs-5">Dashboard</span>
@@ -261,13 +281,52 @@
                                 <span class="fs-5">Account Details</span>
                             </td>
                           </tr>
+                          <tr class="show-account" data-content=".content-four">
+                            <td>
+                                <span class="icon-account"><i class="fa-solid fa-heart fs-5"></i></span>
+                                <span class="fs-5">Favourites</span>
+                            </td>
+                          </tr>
+                          <tr class="show-account" data-content=".content-five">
+                            <td>
+                                <span class="icon-account"><i class="fa-regular fa-credit-card fs-5"></i></span>
+                                <span class="fs-5">Payment Cards</span>
+                            </td>
+                          </tr>
+                          <tr class="show-account" data-content=".content-six">
+                            <td>
+                                <span class="icon-account"><i class="fa-solid fa-money-bill fs-5"></i></span>
+                                <span class="fs-5">Payment History</span>
+                            </td>
+                          </tr>
+                          <tr class="show-account" data-content=".content-seven">
+                            <td>
+                                <span class="icon-account"><i class="fa-solid fa-headset fs-5"></i></span>
+                                <span class="fs-5">Support</span>
+                            </td>
+                          </tr>
+                          <tr class="show-account" data-content=".content-eight">
+                            <td>
+                                <span class="icon-account"><i class="fa-solid fa-ticket fs-5"></i></span>
+                                <span class="fs-5">Ticket</span>
+                            </td>
+                          </tr>
+                          <tr class="show-account" data-content=".content-nine">
+                            <td>
+                                <span class="icon-account"><i class="fa-solid fa-gear fs-5"></i></span>
+                                <span class="fs-5">Settings</span>
+                            </td>
+                          </tr>
                         </tbody>
                       </table>
                 </div>
                 <div class="col-md-9 col-12">
                     <div class="content-list">
                         <div class="content-one">
-                            <h3 class="pt-3 ps-3 mb-4 fw-bold text-black">Dashboard</h3>
+                            <div class="border rounded">
+                              <h4 class="p-3 pb-0 fw-bold text-black">Dashboard</h4>
+                              <hr>
+                           <div class="p-3">
                             <div class="d-flex mb-4">
                               <div class="image-profile">
                                 <img src="images/client_9.jpg" alt="profile" />
@@ -275,14 +334,14 @@
                               <h4 class="text-black d-flex align-items-center ms-2"> aya omar </h4>
                             </div>
                            <div class="row">
-                            <div class="col-lg-4 col-md-6 col-12">
+                            <div class="col-lg-4 col-md-6 col-12 mb-3">
                               <div class="card-dashboard">
                                 <div class="icon-dashboard icon-color1"><i class="fa-solid fa-building"></i></div>
                                 <h4 class="text-black mt-3">visited city</h4>
                                 <p class="fs-5">5</p>
                               </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 col-12">
+                            <div class="col-lg-4 col-md-6 col-12 mb-3">
                               <div class="card-dashboard">
                                 <div class="icon-dashboard"><i class="fa-solid fa-suitcase-rolling"></i></div>
                                 <h4 class="text-black mt-3">Total Trips</h4>
@@ -290,41 +349,83 @@
                               </div>
                             </div>
                            </div>
+                           <hr>
+                           <div class="row">
+                            <div class="col-12"></div>
+                           </div>
+                           </div>
+                            </div>
                         </div>
-                        <div class="content-two border rounded border-bottom-0">
-                            <h4 class="pt-3 ps-3 fw-bold fs-5 text-black">Trips</h4>
+                        <div class="content-two">
+                            <div class="account-details border rounded">
+                              <h4 class="pt-3 ps-3 fw-bold fs-5 text-black">Trips</h4>
                             <hr>
-                            <table class="table">
-                                <tbody>
-                                    <tr>
-                                        <th scope="col" class="ps-3">Trips</th>
-                                        <th scope="col">Hotel</th>
-                                        <th scope="col">Room</th>
-                                        <th scope="col">Date</th>
-                                        <th scope="col">Guests</th>
-                                        <th scope="col">Total</th>
-                                        <th scope="col">Review</th>
-                                      </tr>
+                           <div class="p-3">
+                            <table class="table border">
+                              <tbody>
                                   <tr>
-                                    <td class="ps-3">#1234</td>
-                                    <td>Hotel name</td>
-                                    <td>Room name</td>
-                                    <td>30 oct - 31 oct</td>
-                                    <td>2</td>
-                                    <td>$78.00</td>
-                                    <td><button type="button" class="btn-view rounded"  data-bs-toggle="modal" data-bs-target="#exampleModal">Add</button></td>
-                                  </tr>
-                                  <tr>
-                                    <td class="ps-3">#1234</td>
-                                    <td>Hotel name</td>
-                                    <td>Room name</td>
-                                    <td>30 oct - 31 oct</td>
-                                    <td>2</td>
-                                    <td>$78.00</td>
-                                    <td><button type="button" class="btn-view rounded"  data-bs-toggle="modal" data-bs-target="#exampleModal">Add</button></td>
-                                  </tr>
-                                </tbody>
-                              </table>
+                                      <th scope="col">Hotel</th>
+                                      <th scope="col">Room</th>
+                                      <th scope="col">Date</th>
+                                      <th scope="col">Guests</th>
+                                      <th scope="col">Total</th>
+                                      <th scope="col">action</th>
+                                      <th scope="col">Invoice</th>
+                                      <th scope="col">Review</th>
+                                    </tr>
+                                <tr>
+                                  <td>Hotel name</td>
+                                  <td>Room name</td>
+                                  <td>30 oct - 31 oct</td>
+                                  <td class="text-center">2</td>
+                                  <td>$78.00</td>
+                                  <td>
+                                    <div class="d-flex justify-content-between">
+                                      <button type="button" class="btn-success border-0">Confirm</button>
+                                      <button type="button" class="btn-danger border-0">Cancel</button>
+                                    </div>
+                                  </td>
+                                  <td class="text-center">
+                                    <a href="#" class="pdf-btn"><i class="fa-regular fa-file-pdf"></i></a>
+                                  </td>
+                                  <td><button type="button" class="btn-view rounded"  data-bs-toggle="modal" data-bs-target="#exampleModal">Add</button></td>
+                                </tr>
+                                <tr>
+                                  <td>Hotel name</td>
+                                  <td>Room name</td>
+                                  <td>30 oct - 31 oct</td>
+                                  <td class="text-center">10</td>
+                                  <td>$78.00</td>
+                                  <td>
+                                    <div class="alert-success text-success text-center rounded p-1">
+                                      Confirm
+                                    </div>
+                                  </td>
+                                  <td class="text-center">
+                                    <a href="#" class="pdf-btn"><i class="fa-regular fa-file-pdf"></i></a>
+                                  </td>
+                                  <td><button type="button" class="btn-view rounded"  data-bs-toggle="modal" data-bs-target="#exampleModal">Add</button></td>
+                                </tr>
+                                <tr>
+                                  <td>Hotel name</td>
+                                  <td>Room name</td>
+                                  <td>30 oct - 31 oct</td>
+                                  <td class="text-center">2</td>
+                                  <td>$78.00</td>
+                                  <td>
+                                    <div class="alert-danger text-danger text-center rounded p-1">
+                                      Cancel
+                                    </div>
+                                  </td>
+                                  <td class="text-center">
+                                    <a href="#" class="pdf-btn"><i class="fa-regular fa-file-pdf"></i></a>
+                                  </td>
+                                  <td><button type="button" class="btn-view rounded"  data-bs-toggle="modal" data-bs-target="#exampleModal">Add</button></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                           </div>
+                            </div>
                         </div>
                         <div class="content-three">
                             <div class="account-details border rounded">
@@ -370,6 +471,247 @@
                                     </div>
                                   </form>
                             </div>
+                        </div>
+                        <div class="content-four">
+                          <div class="account-details border rounded">
+                            <h4 class="pt-3 ps-3 fw-bold fs-5 text-black">Favourites</h4>
+                          <hr>
+                          <div class="m-3">
+                            <table class="table border">
+                              <tbody>
+                                  <tr>
+                                      <th scope="col" class="ps-3">image</th>
+                                      <th scope="col">Hotel</th>
+                                      <th scope="col">per night</th>
+                                      <th scope="col">Remove</th>
+                                    </tr>
+                                <tr id="close1">
+                                  <td class="ps-3"><img src="images/2.jpg" class="img-fav"></td>
+                                  <td>
+                                    <a class="hotel-name" href="details-hotel.html">Hotel name</a>
+                                  </td>
+                                  <td>200$</td>
+                                  <td>
+                                    <div class="close-shop-whish" data-close="#close1"><i class="fa-solid fa-xmark"></i></div>
+                                  </td>
+                                </tr>
+                                <tr id="close2">
+                                  <td class="ps-3"><img src="images/2.jpg" class="img-fav"></td>
+                                  <td>
+                                    <a class="hotel-name" href="details-hotel.html">Hotel name</a>
+                                  </td>
+                                  <td>200$</td>
+                                  <td>
+                                    <div class="close-shop-whish" data-close="#close2"><i class="fa-solid fa-xmark"></i></div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          </div>
+                      </div>
+                       <div class="content-five">
+                            <div class="account-details border rounded">
+                                <h4 class="mt-3 ms-3 fw-bold text-black">Payment Cards</h4><hr>
+                                <div class="row p-3">
+                                    <div class="col-md-6 col-sm-12 mb-3">
+                                      <div class="card-payment active">
+                                        <p class="fs-4 text-white">****************357</p>
+                                        <div class="row">
+                                          <div class="col-6">
+                                            <p >Card Holder Name</p>
+                                            <p class="text-white">John Henry</p>
+                                          </div>
+                                          <div class="col-6">
+                                            <p>Expiry Date</p>
+                                            <p class="text-white">05/23</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12 mb-3">
+                                      <div class="card-payment">
+                                        <p class="fs-4 text-white">****************357</p>
+                                        <div class="row">
+                                          <div class="col-6">
+                                            <p >Card Holder Name</p>
+                                            <p class="text-white">John Henry</p>
+                                          </div>
+                                          <div class="col-6">
+                                            <p>Expiry Date</p>
+                                            <p class="text-white">05/23</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <form class="row m-3">
+                                    <div class="col-md-6 col-sm-12 mb-3">
+                                        <label for="validationCustom01" class="form-label">Name on card<span>*</span></label>
+                                        <input type="text" class="w-100 p-2 account" required>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12 mb-3">
+                                        <label for="validationCustom01" class="form-label">card number<span>*</span></label>
+                                        <input type="number" class="w-100 p-2 account" required>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12 mb-3">
+                                        <label for="validationCustom01" class="form-label">mm/yy<span>*</span></label>
+                                        <input type="number" class="w-100 p-2 account" required>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12 mb-3">
+                                        <label for="validationCustom01" class="form-label">cvv<span>*</span></label>
+                                        <input type="number" class="w-100 p-2 account" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn-all mt-3" type="submit">Add Card</button>
+                                    </div>
+                                  </form>
+                            </div>
+                        </div>
+                        <div class="content-six">
+                          <div class="account-details border rounded">
+                              <h4 class="mt-3 ms-3 fw-bold text-black">Payment History</h4><hr>
+                              <div class="p-3">
+                                <table class="table border">
+                                  <tbody>
+                                      <tr>
+                                          <th scope="col">#</th>
+                                          <th scope="col">Date</th>
+                                          <th scope="col">Debit</th>
+                                          <th scope="col">Credit</th>
+                                        </tr>
+                                    <tr>
+                                      <td>1</td>
+                                      <td>31 OCT 2024</td>
+                                      <td>0</td>
+                                      <td>200$</td>
+                                    </tr>
+                                    <tr>
+                                      <td>1</td>
+                                      <td>31 OCT 2024</td>
+                                      <td>0</td>
+                                      <td>200$</td>
+                                    </tr>
+                                    <tr>
+                                      <td>1</td>
+                                      <td>31 OCT 2024</td>
+                                      <td>0</td>
+                                      <td>200$</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                          </div>
+                      </div>
+                        <div class="content-nine">
+                         <div class="border rounded">
+                          <h4 class="mt-3 ms-3 fw-bold text-black">Settings</h4><hr>
+                          <form class="row m-3">
+                            <div class="col-12">
+                              <h4 class="mb-3 color-ornge">Preferences</h4>
+                            </div>
+                              <div class="col-md-6 col-sm-12 mb-3">
+                                  <label for="validationCustom01" class="form-label">Languages</label>
+                                  <select class="form-select p-2" required>
+                                    <option selected disabled value="">Choose Language</option>
+                                    <option>France</option>
+                                    <option>English</option>
+                                  </select>
+                              </div>
+                              <div class="col-md-6 col-sm-12 mb-5">
+                                <label for="validationCustom01" class="form-label">Currencies</label>
+                                <select class="form-select p-2" required>
+                                  <option selected disabled value="">Choose Currency</option>
+                                  <option>Dollar</option>
+                                  <option>Riyal</option>
+                                </select>
+                              </div>
+                              <hr>
+                              <div class="col-12 mt-3">
+                                <h4 class="color-ornge">Residence preferences</h4>
+                              </div>
+                              <div class="col-12 mb-5">
+                                <div class="row">
+                                  <div class="col-12">
+                                    <h5 class="text-black mb-3 mt-3">Room preferences</h5>
+                                  </div>
+                                  <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="mb-2">
+                                      <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault">
+                                      <label class="form-check-label" for="flexCheckDefault">
+                                          Room Type
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="mb-2">
+                                      <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault">
+                                      <label class="form-check-label" for="flexCheckDefault">
+                                          Room Type
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="col-12">
+                                    <h5 class="text-black mb-3 mt-3">Extra services</h5>
+                                  </div>
+                                  <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="mb-2">
+                                      <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault">
+                                      <label class="form-check-label" for="flexCheckDefault">
+                                          Room Type
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-4 col-md-6 col-12">
+                                    <div class="mb-2">
+                                      <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault">
+                                      <label class="form-check-label" for="flexCheckDefault">
+                                          Room Type
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <hr>
+                              <div class="col-12 mb-5">
+                                <div class="row">
+                                  <div class="col-12 mt-3 mb-3">
+                                    <h4 class="color-ornge">Privacy settings</h4>
+                                  </div>
+                                  <div class="col-lg-6 col-12">
+                                    <div class="mb-2">
+                                      <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault">
+                                      <label class="form-check-label" for="flexCheckDefault">
+                                        Share my phone number with the hotel
+                                      </label>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-6 col-12">
+                                    <div class="mb-2">
+                                      <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault">
+                                      <label class="form-check-label" for="flexCheckDefault">
+                                        Share my phone number with the hotel
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <hr>
+                              <div class="col-12 mt-3">
+                                <h4 class="text-black mb-3 color-ornge">Notification management</h4>
+                              </div>
+                              <div class="col-12">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input ms-0" type="checkbox" id="flexSwitchCheckDefault">
+                                  <label class="form-check-label ms-2" for="flexSwitchCheckDefault">Notification</label>
+                                </div>
+                              </div>
+                              <div class="col-12 mt-2">
+                                  <button class="btn-all" type="submit">Save</button>
+                              </div>
+                            </form>
+                         </div>
                         </div>
                     </div>
                 </div>

@@ -3,11 +3,19 @@
   --second-color: #26474E;
   --stroke-color: black;
 }
+body{
+  overflow-x: hidden;
+}
 .color-ornge{
   color: var(--main-color) !important;
 }
 .bg-black{
   background-color: var(--second-color) !important;
+}
+.form-select:focus{
+  border: 1px solid var(--main-color);
+  outline: none;
+  box-shadow: none;
 }
 /* Header */
 .lh-top-social {
@@ -865,7 +873,7 @@ body {
   font-family: "Tajawal", sans-serif;
   /* font-size: 14px; */
   font-weight: 400;
-  color: #777;
+  /* color: #777; */
   line-height: 26px;
   letter-spacing: 0.02rem;
 }
@@ -5686,7 +5694,7 @@ table tr{
 }
  .card-dashboard{
   border-radius: 10px;
-  box-shadow: 0 5px 25px rgb(1 1 1 / 15%);
+  box-shadow: 0 0 10px rgb(1 1 1 / 15%);
   padding: 15px;
  }
  .icon-dashboard{
@@ -5710,3 +5718,76 @@ table tr{
   height: 70px;
   border-radius: 50%;
  }
+
+ .form-switch .form-check-input:checked{
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+ }
+ .pdf-btn{
+  color: red;
+  font-size: 30px;
+  transition: all 0.5s ease;
+ }
+ .pdf-btn:hover{
+  color: var(--second-color);
+ }
+.close-shop-whish{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 0 20px;
+    transition: all 0.5s ease;
+}
+.close-shop-whish:hover{
+    background-color: var(--main-color);
+    color: white;
+
+}
+.hotel-name{
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.5s ease;
+}
+.hotel-name:hover{
+  color: var(--main-color);
+}
+.img-fav{
+  width: 100px;
+  height: 80px;
+  border-radius: 10px;
+}
+
+.form-check-input{
+  width: 20px;
+  height: 20px;
+  border: 2px solid gainsboro;
+}
+.form-check-input:checked{
+  background-color: var(--main-color);
+  box-shadow: none;
+}
+.form-check-input:checked{
+  border: none;
+  outline: none;
+}
+.card-payment{
+  background-image: url("../images/Mask Group.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  height: 200px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.card-payment.active{
+  border: 4px solid var(--main-color);
+}
