@@ -24,6 +24,26 @@ $('.close-shop-whish').click(function (){
 });
 
 
+$('.featured-list li').click(function (){
+
+    $(this).addClass('active').siblings().removeClass("active");
+
+    $('.list-support > div').hide();
+
+    $($(this).data('list')).fadeIn();
+});
+
+
+$('.ticket-list li').click(function (){
+
+    $(this).addClass('active').siblings().removeClass("active");
+
+    $('.list-ticket-support > div').hide();
+
+    $($(this).data('ticket')).fadeIn();
+});
+
+
     
     
     // blogs 
