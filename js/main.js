@@ -43,6 +43,11 @@ $('.ticket-list li').click(function (){
     $($(this).data('ticket')).fadeIn();
 });
 
+// heart button
+
+$('.button-heart').click(function(){
+    $(this).toggleClass('active');
+});
 
     
     
