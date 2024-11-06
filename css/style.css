@@ -5914,3 +5914,74 @@ table tr{
 .content-list > div:not(:first-child){
   display: none;
 }
+.images-hotel img{
+  height: 200px;
+  border-radius: 10px;
+}
+.images-room img{
+  height: 100px;
+  border-radius: 5px;
+}
+.card-rooms{
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.shape{
+  clip-path: polygon(0 0,100% 0,calc(100% - 4px) 100%,0 100%);
+  background-color: var(--second-color);
+  width: max-content;
+  padding: 0 10px;
+  color: white;
+}
+.color1-shape{
+  background-color: #48B8E0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.add-to-cart {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  padding: 5px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+.add-to-cart:hover{
+  background-color: var(--second-color);
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-controls button {
+  background-color: var(--second-color);
+  color: white;
+  border: none;
+  padding: 0 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.quantity {
+  font-size: 18px;
+}
+
+.lh-side-room {
+  background: #f7f5f1;
+  border-radius: 15px;
+  position: sticky;
+  top: 80px;
+  padding: 20px;
+}

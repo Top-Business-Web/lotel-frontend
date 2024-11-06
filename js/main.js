@@ -104,6 +104,34 @@ $('.button-heart').click(function(){
         }
     });
 
+
+      // testimonial room
+
+      $(".owl-carousel.testimonial-slider-room").owlCarousel({
+        autoplay: true,
+        autoplayhoverpause: true,
+        autoplaytimeout: 100,
+        items: 2,
+        nav: false,
+        loop: true,
+        dots: true,
+        responsive: {
+            0 : {
+                items: 1
+            },
+            485 : {
+                items: 1
+            },
+            728 : {
+                items: 2
+            },
+            1200 : {
+                items: 2
+            }
+        }
+    });
+
+
     // testimonial 
 
          $(".owl-carousel.testimonial-slider").owlCarousel({
@@ -178,6 +206,86 @@ $('.tabs-years li').on('click', function (){
 
     $($(this).data('year')).fadeIn();
 });
+
+
+// add to room
+
+$('.add-to-cart').click(function () {
+    $(this).hide(); // إخفاء زر "إضافة للسلة"
+    $(this).siblings('.quantity-controls').show(); // إظهار أزرار التحكم بالكمية
+  });
+
+  $('.increase').click(function () {
+    let quantityElement = $(this).siblings('.quantity');
+    let currentQuantity = parseInt(quantityElement.text());
+    quantityElement.text(currentQuantity + 1); // زيادة الكمية
+  });
+
+  $('.decrease').click(function () {
+    let quantityElement = $(this).siblings('.quantity');
+    let currentQuantity = parseInt(quantityElement.text());
+    if (currentQuantity > 1) {
+      quantityElement.text(currentQuantity - 1); // تقليل الكمية
+    } else {
+      $(this).parent().hide(); // إخفاء أزرار التحكم عند الوصول إلى 0
+      $(this).parent().siblings('.add-to-cart').show(); // إظهار زر "إضافة للسلة"
+    }
+  });
+  
+
+
+// images-room
+
+$(".images-room .owl-carousel").owlCarousel({
+    autoplay: true,
+    autoplayhoverpause: true,
+    autoplaytimeout: 100,
+    items: 3,
+    nav: false,
+    loop: false,
+    dots: false,
+    responsive: {
+        0 : {
+            items: 1
+        },
+        485 : {
+            items: 2
+        },
+        728 : {
+            items: 3
+        },
+        1200 : {
+            items: 3
+        }
+    }
+});
+
+// images-hotel
+
+$(".images-hotel .owl-carousel").owlCarousel({
+    autoplay: true,
+    autoplayhoverpause: true,
+    autoplaytimeout: 100,
+    items: 4,
+    nav: false,
+    loop: false,
+    dots: true,
+    responsive: {
+        0 : {
+            items: 1
+        },
+        485 : {
+            items: 2
+        },
+        728 : {
+            items: 3
+        },
+        1200 : {
+            items: 4
+        }
+    }
+});
+
 
 // featured-properties
 
