@@ -77,7 +77,12 @@
               </div>
               <div class="mb-4 d-flex flex-column form-login">
                 <label for="exampleFormControlInput1" class="form-label">Password</label>
-                <input type="password" class="" id="inputPassword">
+                <div class="input-container">
+                    <input type="password" class="w-100" id="inputPassword">
+                    <span class="toggle-password" onclick="togglePassword()">
+                        <i class="fa-regular fa-eye"></i>
+                    </span>
+                </div>
               </div>
                 <button class="btn-login w-100 mt-3" type="submit">Sign In</button>
                 <div class="d-flex justify-content-end mt-4 mb-2">
