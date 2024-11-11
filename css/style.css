@@ -6010,3 +6010,170 @@ table tr{
 .icon-card-search{
   color: gray;
 }
+.btn-listing{
+  background-color: transparent;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: all 0.5s ease;
+}
+.btn-listing:hover{
+  background-color: var(--main-color);
+  color: white;
+}
+
+/* add listing */
+
+.progress-line{
+  display: flex;
+  margin: 20px 0;
+}
+.progress-line .step{
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+.progress-line .step p{
+  font-size: 23px;
+  font-weight: bold;
+  color: gray;
+  transition: 0.2s;
+}
+.progress-line .step p.active{
+  color: var(--main-color);
+}
+.progress-line .step .check{
+  position: absolute;
+  left: 48.5%;
+  top: 47%;
+  font-size: 15px;
+  display: none;
+}
+.progress-line .step .check.active{
+  display: block;
+  color: white;
+}
+.progress-line .step .bullet.active span{
+  display: none;
+}
+.progress-line .step .bullet{
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  background-color: gainsboro;
+  color: white;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.2s;
+}
+.progress-line .step .bullet.active{
+  border-color: var(--main-color);
+  background-color: var(--main-color);
+}
+.progress-line .step .bullet::before,
+.progress-line .step .bullet::after{
+  content: "";
+  width: 520px;
+  height: 3px;
+  background-color: gainsboro;
+  position: absolute;
+  bottom: 11px;
+  right: -525px;
+}
+.progress-line .step:last-child .bullet::before,
+.progress-line .step:last-child .bullet::after{
+  display: none;
+}
+@media (max-width:1200px) {
+  .progress-line .step .bullet::before,
+  .progress-line .step .bullet::after{
+      width: 430px;
+      right: -435px;
+  }
+}
+@media (max-width:992px) {
+  .progress-line .step .bullet::before,
+  .progress-line .step .bullet::after{
+      width: 310px;
+      right: -315px;
+  }
+  .progress-line .step .check{
+      left: 48%;
+  }
+}
+@media (max-width:768px) {
+  .progress-line .step .bullet::before,
+  .progress-line .step .bullet::after{
+      width: 220px;
+      right: -225px;
+  }
+  .progress-line .step .check{
+      left: 47.5%;
+  }
+}
+@media (max-width:550px) {
+  .progress-line .step .bullet::before,
+  .progress-line .step .bullet::after{
+      width: 190px;
+      right: -195px;
+  }
+  .progress-line .step .check{
+      left: 47%;
+  }
+}
+.progress-line .step .bullet.active::after{
+  background-color: var(--main-color);
+  transform: scalex(0);
+  transform-origin: left;
+  animation: animateProgress 0.3s linear forwards;
+}
+@keyframes animateProgress {
+  100%{
+      transform: scaleX(1);
+  }
+}
+.form-outer{
+  overflow: hidden;
+}
+.form-outer .form{
+  display: flex;
+  width: 400%;
+}
+.form-outer .form .page{
+  width: 25%;
+  transition: margin-left 0.3s ease-in-out;
+}
+.form-outer .form .page .field{
+  margin: 10px 0;
+}
+.btn-complete{
+  background-color: var(--second-color);
+  border: none;
+  color: white;
+  width: 150px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.card-listing{
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+.view{
+  text-decoration: underline;
+  color: var(--second-color);
+  font-weight: bold;
+  font-size: 18px;
+  transition: all 0.5s ease;
+}
+.view:hover{
+  color: var(--main-color);
+}

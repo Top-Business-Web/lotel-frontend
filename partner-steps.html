@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hotel Booking">
+    <title>LOTEL</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=El+Messiri:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div class="lh-loader">
+        <span class="loader"></span>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="bg-black pt-2 pb-2">
+            <div class="container">
+                <div class="d-flex justify-content-between pt-2 pb-2">
+                    <div>
+                        <a class="navbar-brand" href="index.html">
+                            <img src="images/logo.png" alt="logo" class="lh-logo">
+                        </a>
+                    </div>
+                    <div>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown">
+                                    <img src="images/english.png" style=" width: 35px; height: 20px;">
+                                    English
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <img src="images/france.png" style=" width: 35px; height: 20px;">
+                                            France
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- section -->
+
+    <section class="padding-tb-100">
+        <div class="container">
+            <h2>Hi, Aya </h2>
+            <p class="fs-5">This is where you can manage all your listings.</p>
+            <div class="d-flex justify-content-between mt-5 mb-5">
+                <h4>My Listings</h4>
+                <a class="btn-listing" href="add-listing.html">Add New Listing</a>
+            </div>
+            <div class="mt-4 d-flex flex-column align-items-center">
+                <div class="mb-5">
+                    <img src="images/listing.svg" alt="no-image" style="height: 200px;">
+                </div>
+                <a class="btn-listing" href="add-listing.html">Add New Listing</a>
+            </div>
+          <div class="card-listing">
+            <div>
+                <div class="d-flex">
+                    <i class="fa-solid fa-building fa-lg mt-1 me-3 color-ornge"></i>
+                    <h4>Hotel Name</h4>
+                </div>
+                <div class="d-flex">
+                    <i class="fa-solid fa-location-dot fa-lg mt-1 me-3 color-ornge"></i>
+                    <p class="fs-5">Rabat, Moroco</p>
+                </div>
+            </div>
+            <div>
+                <a href="add-listing.html" class="view"> View Summary</a>
+            </div>
+          </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+     <footer>
+        <div class="container">
+            <div class="footer-top-section">
+            <div class="row">
+                <div class="col-md-5 col-12">
+                    <div class="">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="images/logo.png" alt="logo" class="lh-logo">
+                        </a>
+                        <p class="mt-4 text-white fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, eum. Repellendus incidunt ex maiores magni sapiente.</p>
+                    </div>
+                    <div class="lh-follow-social mt-4">
+                        <div class="footer-logo-image">
+                            <a href="#"><img src="images/facebook.png" alt="facebook"></a>
+                            <a href="#"><img src="images/twitter.png" alt="twitter"></a>
+                            <a href="#"><img src="images/instagram.png" alt="instagram"></a>
+                            <a href="#"><img src="images/linkedin.png" alt="linkedin"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-md-6 rs-pb-24 order-lg-3 order-md-3 order-3">
+                    <div class="lh-footer-cols-contain ">
+                        <div class="lh-footer-heading">
+                            <h4 class="text-white">Contact Information</h4>
+                        </div>
+                        <div class="lh-footer-contact-infoemation">
+                            <ul>
+                                <li class="lh-information">
+                                    <h5 class="heading">Location</h5>
+                                    <span>Moroco</span>
+                                </li>
+                                <li class="lh-information">
+                                    <h5 class="heading">Email</h5>
+                                    <span>lotel@test.com</span>
+                                </li>
+                                <li class="lh-information">
+                                    <h5 class="heading">Phone No</h5>
+                                    <span>+0000000000000</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="footer-bottom-copy">
+                <span>Copyright @ <span id="copyright_year"></span> <a href="https://topbuziness.com/">Top Business</a> All Rights Reserved</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Tap to top -->
+    <a href="#" class="back-to-top result-placeholder">
+        <i class="fa-solid fa-angles-up mt-2"></i>
+    </a>
+
+
+    <!-- Plugins JS -->
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+
+</body>
+
+</html>
