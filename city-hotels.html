@@ -248,8 +248,36 @@
 
     <section class="pt-5 mt-5 featured-properties">
         <div class="container">
-            <div class="banner mb-5">
+            <div class="banner mb-5 d-flex justify-content-between">
                 <h2 style="text-align: left;">Featured Properties</h2>
+                <div class="filters">
+                    <div class="d-flex">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle dropdown-filter" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-arrow-right-arrow-left rotate"></i>
+                                Sort
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">
+                                <i class="fa-solid fa-arrow-down-wide-short"></i>
+                                Lowest Price
+                              </a></li>
+                              <li><a class="dropdown-item" href="#">
+                                <i class="fa-solid fa-arrow-up-short-wide"></i>
+                                Highest Price
+                              </a></li>
+                              <li><a class="dropdown-item" href="#">
+                                <i class="fa-solid fa-star"></i>
+                                Best Rated
+                              </a></li>
+                            </ul>
+                          </div>
+                          <button class="btn dropdown-filter ms-3" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <i class="fa-solid fa-filter"></i>
+                            Filter
+                        </button>
+                    </div>
+                </div>
             </div>
             <div class="owl-carousel owl-theme">
                 <div class="card-hotel-top">
@@ -542,6 +570,133 @@
     </a>
 
 
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Filters</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style="height: 450px; overflow-y: auto;">
+            <div>
+                <h5 class="mb-4 fw-bold">Price per night</h5>
+            <div class="slider">
+              <div class="progress"></div>
+            </div>
+            <div class="range-input">
+              <input type="range" class="range-min" min="0" max="500" value="50">
+              <input type="range" class="range-max" min="0" max="500" value="300">
+            </div>
+            <div class="price-input mt-4 mb-4">
+              <div class="fw-bold d-flex align-items-center">Price:</div>
+                <input type="" class="input-min" value="50">
+              <div class="separator">-</div>
+                <input type="" class="input-max" value="300">
+            </div>
+            <hr>
+            </div>
+            <div>
+                <h5 class="mb-4 fw-bold">Room type</h5>
+                <div class="d-flex">
+                    <div class="room-type active">
+                        <i class="fa-solid fa-bed"></i>
+                        Dorms
+                    </div>
+                    <div class="room-type">
+                        <i class="fa-solid fa-door-closed"></i>
+                        Private
+                    </div>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input ms-0" type="checkbox" id="flexSwitchCheckDefault">
+                    <label class="form-check-label ms-2" for="flexSwitchCheckDefault">ensuite (private bathroom)</label>
+                  </div>
+            <hr>
+            </div>
+
+            <div>
+                <h5 class="mb-4 fw-bold">Facilities</h5>
+                <div class="d-flex flex-wrap">
+                    <div class="room-type">
+                        <i class="fa-solid fa-bicycle"></i>
+                        bicycle parking
+                    </div>
+                    <div class="room-type active">
+                        <i class="fa-solid fa-broom"></i>
+                        housekeeping
+                    </div>
+                    <div class="room-type">
+                        <i class="fa-solid fa-suitcase-rolling"></i>
+                        luggage storage
+                    </div>
+                    <div class="room-type">
+                        <i class="fa-solid fa-bicycle"></i>
+                        bicycle parking
+                    </div>
+                </div>
+            <hr>
+            </div>
+
+            <div>
+                <h5 class="mb-4 fw-bold">Rating</h5>
+                <div class="d-flex flex-wrap">
+                    <div class="room-type">
+                        <i class="fa-solid fa-star"></i>
+                        1 +
+                    </div>
+                    <div class="room-type active">
+                        <i class="fa-solid fa-star"></i>
+                        2 +
+                    </div>
+                    <div class="room-type">
+                        <i class="fa-solid fa-star"></i>
+                        3 +
+                    </div>
+                    <div class="room-type">
+                        <i class="fa-solid fa-star"></i>
+                        4 +
+                    </div>
+                    <div class="room-type">
+                        <i class="fa-solid fa-star"></i>
+                        5 +
+                    </div>
+                </div>
+            <hr>
+            </div>
+
+            <div>
+                <h5 class="mb-4 fw-bold">Property Type</h5>
+                <div class="mb-2">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        hostels
+                    </label>
+                  </div>
+                  <div class="mb-2">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        campsites
+                    </label>
+                  </div>
+                  <div class="mb-2">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        hotels
+                    </label>
+                  </div>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn bg-orange text-white">clear</button>
+          <button type="button" class="btn bg-black text-white">Lets go</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
     <!-- Plugins JS -->
     <script src="js/all.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -556,6 +711,40 @@
 
     <script>
         new WOW().init();
+
+        // filter price in product page
+
+const rangeInput = document.querySelectorAll(".range-input input"),
+priceInput = document.querySelectorAll(".price-input input"),
+progress = document.querySelector(".slider .progress");
+
+    let priceGap = 50;
+
+rangeInput.forEach(input => {
+    input.addEventListener("input", e =>{
+        let minVal = parseInt(rangeInput[0].value),
+            maxVal = parseInt(rangeInput[1].value);
+
+            if(maxVal - minVal < priceGap){
+
+                if(e.target.className === "range-min"){
+
+                    rangeInput[0].value = maxVal - priceGap;
+                }else{
+
+                    rangeInput[1].value = minVal + priceGap;
+                }
+
+            }else{
+                priceInput[0].value = minVal;
+                priceInput[1].value = maxVal;
+                progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+                progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+            }
+    });
+});
+
+
     </script>
 
 </body>
