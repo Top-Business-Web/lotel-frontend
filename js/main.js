@@ -210,27 +210,33 @@ $('.tabs-years li').on('click', function (){
 
 // add to room
 
+const maxQuantity = 10; // الحد الأقصى للكمية
+        
 $('.add-to-cart').click(function () {
-    $(this).hide(); // إخفاء زر "إضافة للسلة"
-    $(this).siblings('.quantity-controls').show(); // إظهار أزرار التحكم بالكمية
-  });
+  $(this).hide(); // إخفاء زر "إضافة للسلة"
+  $(this).siblings('.quantity-controls').show(); // إظهار أزرار التحكم بالكمية
+});
 
-  $('.increase').click(function () {
-    let quantityElement = $(this).siblings('.quantity');
-    let currentQuantity = parseInt(quantityElement.text());
+$('.increase').click(function () {
+  let quantityElement = $(this).siblings('.quantity');
+  let currentQuantity = parseInt(quantityElement.text());
+  
+  if (currentQuantity < maxQuantity) { // تحقق من الحد الأقصى
     quantityElement.text(currentQuantity + 1); // زيادة الكمية
-  });
+  }
+});
 
-  $('.decrease').click(function () {
-    let quantityElement = $(this).siblings('.quantity');
-    let currentQuantity = parseInt(quantityElement.text());
-    if (currentQuantity > 1) {
-      quantityElement.text(currentQuantity - 1); // تقليل الكمية
-    } else {
-      $(this).parent().hide(); // إخفاء أزرار التحكم عند الوصول إلى 0
-      $(this).parent().siblings('.add-to-cart').show(); // إظهار زر "إضافة للسلة"
-    }
-  });
+$('.decrease').click(function () {
+  let quantityElement = $(this).siblings('.quantity');
+  let currentQuantity = parseInt(quantityElement.text());
+  
+  if (currentQuantity > 1) {
+    quantityElement.text(currentQuantity - 1); // تقليل الكمية
+  } else {
+    $(this).parent().hide(); // إخفاء أزرار التحكم عند الوصول إلى 0
+    $(this).parent().siblings('.add-to-cart').show(); // إظهار زر "إضافة للسلة"
+  }
+});
   
 
 
