@@ -400,6 +400,27 @@
     <script src="js/app.js"></script>
     <script src="js/owl.carousel.min.js"></script>
 
+    <script>
+        $(".view").magnificPopup({
+            type: "iframe",
+            mainClass: "mfp-fade",
+            removalDelay: 160,
+            preloader: false,
+            iframe: {
+              patterns: {
+                youtube: {
+                  index: "youtube.com",
+                  id: "v=",
+                  src: "https://www.youtube.com/embed/%id%",
+                },
+              },
+              srcAction: "iframe_src",
+            },
+            fixedContentPos: false,
+          });
+    
+    </script>
+
     <script src="js/main.js"></script>
 
 </body>
