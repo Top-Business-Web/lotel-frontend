@@ -6,6 +6,24 @@ $(function(){
         $('.lh-loader').css({'display': 'none'});
     });
 
+    $(".view").magnificPopup({
+        type: "iframe",
+        mainClass: "mfp-fade",
+        removalDelay: 160,
+        preloader: false,
+        iframe: {
+          patterns: {
+            youtube: {
+              index: "youtube.com",
+              id: "v=",
+              src: "https://www.youtube.com/embed/%id%",
+            },
+          },
+          srcAction: "iframe_src",
+        },
+        fixedContentPos: false,
+      });
+
     //   profile
 
 $('.show-account').on('click', function (){
@@ -334,7 +352,5 @@ $('.main-slider').slick({
     centerMode: true,
     focusOnSelect: true
   });
-
-
 
 });

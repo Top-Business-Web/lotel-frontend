@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hotel Booking">
+    <title>LOTEL</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- الرابط لفتح الفيديو -->
+    <a href="https://www.youtube.com/watch?v=YQ8kgnIVLMw" class="text-decoration-none view">
+        <i class="fa-solid fa-plus"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+          $(".view").magnificPopup({
+            type: "iframe",
+            mainClass: "mfp-fade",
+            removalDelay: 160,
+            preloader: false,
+            iframe: {
+              patterns: {
+                youtube: {
+                  index: "youtube.com",
+                  id: "v=",
+                  src: "https://www.youtube.com/embed/%id%",
+                },
+              },
+              srcAction: "iframe_src",
+            },
+            fixedContentPos: false,
+          });
+        });
+      </script>
+
+</body>
+
+</html>
