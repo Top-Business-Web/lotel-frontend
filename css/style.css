@@ -6280,3 +6280,58 @@ input[type="range"]::-webkit-slider-thumb{
   border: 1px solid var(--main-color);
   color: var(--main-color);
 }
+.lh-side-room1 {
+  background: #f7f5f1;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.btn-back{
+  background-color: transparent;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  width: 150px;
+  transition: all 0.5s ease;
+  text-align: center;
+}
+.btn-back:hover{
+  background-color: var(--main-color);
+  color: white;
+}
+.box-size{
+  padding: 5px;
+  border: 2px solid white;
+}
+.custom-check:checked ~ label.box-size{
+    border: 2px solid var(--main-color);
+    padding: 5px;
+}
+.custom-check{
+    display: none;
+}
+
+.progress-bar {
+  width: 100%;
+  max-width: 400px;
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px 0 30px 0;
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  background: var(--main-color);
+  transition: width 1s linear;
+}
+
+#time-remaining {
+  font-size: 24px;
+  color: #333;
+}

@@ -1,55 +1,89 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hotel Booking">
-    <title>LOTEL</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>15-Minute Timer</title>
+  <style>
+    /* style.css */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  margin: 0;
+}
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/style.css">
+.timer-container {
+  text-align: center;
+}
+
+.progress-bar {
+  width: 100%;
+  max-width: 400px;
+  height: 20px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  background: #76c7c0;
+  transition: width 1s linear;
+}
+
+#time-remaining {
+  font-size: 24px;
+  color: #333;
+}
+
+  </style>>
 </head>
-
 <body>
+  <div class="timer-container">
+    <div class="progress-bar">
+      <div class="progress"></div>
+    </div>
+    <p id="time-remaining">10:00</p>
+  </div>
 
-    <!-- الرابط لفتح الفيديو -->
-    <a href="https://www.youtube.com/watch?v=YQ8kgnIVLMw" class="text-decoration-none view">
-        <i class="fa-solid fa-plus"></i>
-    </a>
+  
+  <script>
+    // script.js
+document.addEventListener('DOMContentLoaded', () => {
+  const totalMinutes = 10; // Timer duration in minutes
+  const totalSeconds = totalMinutes * 60; // Convert to seconds
+  const progressBar = document.querySelector('.progress');
+  const timeDisplay = document.getElementById('time-remaining');
 
-    <!-- Scripts -->
-    <script src="js/jquery-1.10.1.min.js"></script>
-    <script src="js/all.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
+  let elapsedSeconds = 0;
 
-    <script>
-        $(document).ready(function () {
-          $(".view").magnificPopup({
-            type: "iframe",
-            mainClass: "mfp-fade",
-            removalDelay: 160,
-            preloader: false,
-            iframe: {
-              patterns: {
-                youtube: {
-                  index: "youtube.com",
-                  id: "v=",
-                  src: "https://www.youtube.com/embed/%id%",
-                },
-              },
-              srcAction: "iframe_src",
-            },
-            fixedContentPos: false,
-          });
-        });
-      </script>
+  const timerInterval = setInterval(() => {
+    elapsedSeconds++;
 
+    // Update progress bar
+    const progressPercent = (elapsedSeconds / totalSeconds) * 100;
+    progressBar.style.width = `${progressPercent}%`;
+
+    // Update time remaining
+    const remainingSeconds = totalSeconds - elapsedSeconds;
+    const minutes = Math.floor(remainingSeconds / 60);
+    const seconds = remainingSeconds % 60;
+    timeDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+
+    // Stop timer at the end
+    if (elapsedSeconds >= totalSeconds) {
+      clearInterval(timerInterval);
+      timeDisplay.textContent = "Time's up!";
+    }
+  }, 1000);
+});
+
+  </script>
 </body>
-
 </html>

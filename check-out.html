@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Hotel Booking" />
+    <title>LOTEL</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=El+Messiri:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="lh-loader">
+      <span class="loader"></span>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="bg-black pt-2 pb-2">
+            <div class="container">
+                <div class="d-flex justify-content-between pt-2 pb-2">
+                    <div>
+                        <a class="navbar-brand" href="index.html">
+                            <img src="images/logo.png" alt="logo" class="lh-logo">
+                        </a>
+                    </div>
+                    <div>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown">
+                                    <img src="images/english.png" style=" width: 35px; height: 20px;">
+                                    English
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <img src="images/france.png" style=" width: 35px; height: 20px;">
+                                            France
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="mb-5 mt-5">
+        <div class="container">
+            <h2 class="fw-bold mb-4">Check Out</h2>
+            <div class="row">
+                <div class="col-12">
+                    <div class="timer-container">
+                        <p id="time-remaining" class="color-ornge fw-bold">10:00</p>
+                        <div class="progress-bar">
+                          <div class="progress"></div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-7 col-12 mb-3">
+                    <div class="form-outer">
+                        <div class="form">
+                            <div class="page slidePage">
+                                <div>
+                                    <form class="row form-contact">
+                                        <div class="col-lg-6 col-12 mb-3">
+                                            <div class="form-check ms-3">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                    Payment Online
+                                                </label>
+                                              </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12 mb-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                                <label class="form-check-label" for="flexRadioDefault2">
+                                                    Payment Hotel
+                                                </label>
+                                              </div>
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Your Name</label>
+                                            <input type="text" class="w-100 p-2" value="Aya Omar">
+                                        </div>
+                                          <div class="col-12 mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Your Nationality</label>
+                                            <select class="form-select p-2" required>
+                                                <option selected disabled value="">Choose Your Nationality</option>
+                                                <option>Nationality1</option>
+                                                <option>Nationality2</option>
+                                              </select>
+                                          </div>
+                                          <div class="col-12 mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Your Email</label>
+                                            <input type="text" class="w-100 p-2" value="info@topbusiness.io">
+                                        </div>
+                                        <div class="col-12 mt-4">
+                                            <div class="d-flex justify-content-between mt-5">
+                                                <a href="choose-room.html" class="btn-back">
+                                                    Back
+                                                </a>
+                                                <button type="button" class="border-0 mt-0 next-btn btn-complete">Next</button>
+                                            </div>
+                                        </div>
+                                      </form>
+                                </div>
+                            </div>
+                            <div class="page">
+                                <div>
+                                    <h6 class="text-danger">Hint: 10% will be deducted from the card</h6>
+                                </div>
+                                <div class="row p-3">
+                                    <div class="col-lg-6 col-12 mb-3">
+                                        <div>
+                                            <input type="radio" class="custom-check" name="box-size" id="x">
+                                            <label for="x" class="box-size">
+                                                <h6>John Doe</h6>
+                                                <p class="fs-4">****************357</p> 
+                                          </label>
+                                          </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12 mb-3">
+                                        <div>
+                                            <input type="radio" class="custom-check" name="box-size" id="s">
+                                            <label for="s" class="box-size">
+                                                <h6>John Doe</h6>
+                                                <p class="fs-4">****************357</p> 
+                                          </label>
+                                          </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <form class="row m-3 account-details">
+                                    <div class="col-md-6 col-sm-12 mb-3">
+                                        <label for="validationCustom01" class="form-label">Name on card<span>*</span></label>
+                                        <input type="text" class="w-100 p-2 account" required>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12 mb-3">
+                                        <label for="validationCustom01" class="form-label">card number<span>*</span></label>
+                                        <input type="number" class="w-100 p-2 account" required>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12 mb-3">
+                                        <label for="validationCustom01" class="form-label">mm/yy<span>*</span></label>
+                                        <input type="number" class="w-100 p-2 account" required>
+                                    </div>
+                                    <div class="col-md-6 col-sm-12 mb-3">
+                                        <label for="validationCustom01" class="form-label">cvv<span>*</span></label>
+                                        <input type="number" class="w-100 p-2 account" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check ms-3">
+                                          <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                                          <label class="form-check-label" for="invalidCheck2">
+                                            Save Card
+                                          </label>
+                                        </div>
+                                      </div>
+                                    <div class="col-12">
+                                        <button class="btn-all mt-3" type="submit">Add Card</button>
+                                    </div>
+                                  </form>
+                                <div class="d-flex justify-content-between mt-5">
+                                    <button type="button" class="prev-1 btn-listing" style="width: 150px;">Back</button>
+                                    <button type="button" class="submit-pay btn-complete" data-bs-toggle="modal" data-bs-target="#exampleModal">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-12">
+                    <div class="lh-side-room1">
+                        <div class="d-flex">
+                            <h5 class="me-2 color-ornge fw-bold">Date: </h5>
+                            <span>24/11/2024 To 26/11/2024</span>
+                        </div>
+                        <div class="d-flex">
+                            <h5 class="me-2 color-ornge fw-bold">Guests: </h5>
+                            <span>2</span>
+                        </div>
+                        <div>
+                            <div class="mt-3">
+                                <h5 class="fw-bold">Room Name</h5>
+                            </div>
+                            <p><span>2</span> Rooms</p>
+                            <div class="d-flex justify-content-between">
+                                <p><span>200$</span> x <span>3</span> Nights</p>
+                                <p>600$</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div>
+                            <div class="mt-3">
+                                <h5 class="fw-bold">Room Name</h5>
+                            </div>
+                            <p><span>2</span> Rooms</p>
+                            <div class="d-flex justify-content-between">
+                                <p><span>200$</span> x <span>3</span> Nights</p>
+                                <p>600$</p>
+                            </div>
+                        </div>
+                        <form class="mt-3">
+                            <div class="search-control-boxing shadow-none">
+                                <div class="lh-col p-0">
+                                    <div class="search-box d-flex">
+                                        <div class="lh-col">
+                                            <div class="search-box">
+                                                <h4 class="heading">
+                                                    Coupoun
+                                                </h4>
+                                                <div class="calendar" id="date_2">
+                                                    <input type="number" placeholder="Enter Your Coupoun" class="lh-book-form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="lh-col-check mt-2">
+                                            <div class="search-control-button d-flex justify-content-end align-items-end">
+                                                <a class="lh-buttons result-placeholder text-decoration-none" href="#">
+                                                    Submit
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="d-flex justify-content-between mt-4">
+                            <h5 class="fw-bold">Total</h5>
+                            <p class="fw-bold">1200$</p>
+                        </div>
+                        <div>
+                            <a class="color-ornge fs-6 fw-bold" href="privacy.html">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+     <footer>
+        <div class="container">
+            <div class="footer-top-section">
+            <div class="row">
+                <div class="col-md-5 col-12">
+                    <div class="">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="images/logo.png" alt="logo" class="lh-logo">
+                        </a>
+                        <p class="mt-4 text-white fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, eum. Repellendus incidunt ex maiores magni sapiente.</p>
+                    </div>
+                    <div class="lh-follow-social mt-4">
+                        <div class="footer-logo-image">
+                            <a href="#"><img src="images/facebook.png" alt="facebook"></a>
+                            <a href="#"><img src="images/twitter.png" alt="twitter"></a>
+                            <a href="#"><img src="images/instagram.png" alt="instagram"></a>
+                            <a href="#"><img src="images/linkedin.png" alt="linkedin"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-md-6 rs-pb-24 order-lg-3 order-md-3 order-3">
+                    <div class="lh-footer-cols-contain ">
+                        <div class="lh-footer-heading">
+                            <h4 class="text-white">Contact Information</h4>
+                        </div>
+                        <div class="lh-footer-contact-infoemation">
+                            <ul>
+                                <li class="lh-information">
+                                    <h5 class="heading">Location</h5>
+                                    <span>Moroco</span>
+                                </li>
+                                <li class="lh-information">
+                                    <h5 class="heading">Email</h5>
+                                    <span>lotel@test.com</span>
+                                </li>
+                                <li class="lh-information">
+                                    <h5 class="heading">Phone No</h5>
+                                    <span>+0000000000000</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="footer-bottom-copy">
+                <span>Copyright @ <span id="copyright_year"></span> <a href="https://topbuziness.com/">Top Business</a> All Rights Reserved</span>
+            </div>
+        </div>
+    </footer>
+
+
+
+     <!-- Tap to top -->
+     <a href="#" class="back-to-top result-placeholder">
+        <i class="fa-solid fa-angles-up mt-2"></i>
+    </a>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="d-flex justify-content-end">
+          <button type="button" class="btn-close m-2" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex justify-content-center">
+            <img src="images/confirm-icon.svg" alt="no-image" style="height: 50px;">
+          </div>
+          <p class="text-center fs-6 fw-bold mt-4">
+            This amount of <span class="color-ornge fs-5">2000$</span> will be deducted from the visa
+            Are you sure about that?
+          </p>
+          <div class="d-flex justify-content-center mt-3 mb-4">
+            <button class="btn-all mt-3" type="submit">Confirm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- Plugins JS -->
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script>
+
+        // progress line 
+
+const slidePage = document.querySelector(".slidePage");
+const firstNextBtn = document.querySelector(".next-btn");
+const prevBtn1 = document.querySelector(".prev-1");
+
+firstNextBtn.addEventListener("click", function(){
+    slidePage.style.marginLeft = "-25%";
+});
+
+prevBtn1.addEventListener("click", function(){
+    slidePage.style.marginLeft = "0%";
+});
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const totalMinutes = 10; // Timer duration in minutes
+    const totalSeconds = totalMinutes * 60; // Convert to seconds
+    const progressBar = document.querySelector('.progress');
+    const timeDisplay = document.getElementById('time-remaining');
+  
+    let elapsedSeconds = 0;
+  
+    const timerInterval = setInterval(() => {
+      elapsedSeconds++;
+  
+      // Update progress bar
+      const progressPercent = (elapsedSeconds / totalSeconds) * 100;
+      progressBar.style.width = `${progressPercent}%`;
+  
+      // Update time remaining
+      const remainingSeconds = totalSeconds - elapsedSeconds;
+      const minutes = Math.floor(remainingSeconds / 60);
+      const seconds = remainingSeconds % 60;
+      timeDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+  
+      // Stop timer at the end
+      if (elapsedSeconds >= totalSeconds) {
+        clearInterval(timerInterval);
+        timeDisplay.textContent = "Time's up!";
+      }
+    }, 1000);
+  });
+
+    </script>
+
+</body>
+
+</html>
