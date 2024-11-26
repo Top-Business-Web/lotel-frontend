@@ -3,87 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>15-Minute Timer</title>
+  <title>Hearts Animation</title>
   <style>
-    /* style.css */
-body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f5f5f5;
-  margin: 0;
-}
 
-.timer-container {
-  text-align: center;
-}
 
-.progress-bar {
-  width: 100%;
-  max-width: 400px;
-  height: 20px;
-  background: #e0e0e0;
-  border-radius: 10px;
-  overflow: hidden;
-  margin: 20px 0;
-}
-
-.progress {
-  height: 100%;
-  width: 0%;
-  background: #76c7c0;
-  transition: width 1s linear;
-}
-
-#time-remaining {
-  font-size: 24px;
-  color: #333;
-}
-
-  </style>>
+    #loveEffect {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: 0;
+    }
+    
+    
+  </style>
 </head>
 <body>
-  <div class="timer-container">
-    <div class="progress-bar">
-      <div class="progress"></div>
-    </div>
-    <p id="time-remaining">10:00</p>
-  </div>
 
-  
-  <script>
-    // script.js
-document.addEventListener('DOMContentLoaded', () => {
-  const totalMinutes = 10; // Timer duration in minutes
-  const totalSeconds = totalMinutes * 60; // Convert to seconds
-  const progressBar = document.querySelector('.progress');
-  const timeDisplay = document.getElementById('time-remaining');
+  <div id="loveEffect"></div>
 
-  let elapsedSeconds = 0;
 
-  const timerInterval = setInterval(() => {
-    elapsedSeconds++;
 
-    // Update progress bar
-    const progressPercent = (elapsedSeconds / totalSeconds) * 100;
-    progressBar.style.width = `${progressPercent}%`;
+<script src="js/jquery-1.10.1.min.js"></script>
 
-    // Update time remaining
-    const remainingSeconds = totalSeconds - elapsedSeconds;
-    const minutes = Math.floor(remainingSeconds / 60);
-    const seconds = remainingSeconds % 60;
-    timeDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
 
-    // Stop timer at the end
-    if (elapsedSeconds >= totalSeconds) {
-      clearInterval(timerInterval);
-      timeDisplay.textContent = "Time's up!";
-    }
-  }, 1000);
-});
+<script src="https://cdn.jsdelivr.net/gh/VincentGarreau/fireworks-js/dist/fireworks.min.js"></script>
 
-  </script>
+
+<script>
+
+
+  const container = document.getElementById('loveEffect');
+  const fireworks = new Fireworks(container, {
+    particles: 200,
+    shapes: ['circle', 'heart'],
+    colors: ['#ff4081', '#ff80ab', '#ff1744'],
+  });
+  fireworks.start();
+
+
+</script>
+
 </body>
 </html>

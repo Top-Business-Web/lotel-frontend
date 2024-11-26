@@ -6170,14 +6170,14 @@ table tr{
   align-items: center;
   margin-top: 30px;
 }
-.view{
+.view-dashboard{
   text-decoration: underline;
   color: var(--second-color);
   font-weight: bold;
   font-size: 18px;
   transition: all 0.5s ease;
 }
-.view:hover{
+.view-dashboard:hover{
   color: var(--main-color);
 }
 .span-review{
