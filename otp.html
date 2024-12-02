@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Input</title>
+    <style>
+        .otp-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .otp-input {
+            width: 40px;
+            height: 40px;
+            font-size: 24px;
+            text-align: center;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+        }
+
+        .otp-input:focus {
+            border-color: #f27438;
+        }
+
+        .otp-input.invalid {
+            border-color: #f27438;
+        }
+
+        .otp-input:disabled {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Please enter the OTP</h2>
+
+<div class="otp-container">
+    <!-- 6 OTP input fields -->
+    <input type="text" maxlength="1" class="otp-input" id="otp1">
+    <input type="text" maxlength="1" class="otp-input" id="otp2">
+    <input type="text" maxlength="1" class="otp-input" id="otp3">
+    <input type="text" maxlength="1" class="otp-input" id="otp4">
+    <input type="text" maxlength="1" class="otp-input" id="otp5">
+    <input type="text" maxlength="1" class="otp-input" id="otp6">
+</div>
+
+<script>
+    // Focus on the next input when a digit is entered
+    const otpInputs = document.querySelectorAll('.otp-input');
+
+    otpInputs.forEach((input, index) => {
+        input.addEventListener('input', (e) => {
+            // Automatically move to the next input if a number is entered
+            if (e.target.value.length === 1 && index < otpInputs.length - 1) {
+                otpInputs[index + 1].focus();
+            }
+        });
+
+        // Allow only numeric input
+        input.addEventListener('keypress', (e) => {
+            if (!/[0-9]/.test(e.key)) {
+                e.preventDefault();
+            }
+        });
+    });
+
+    // Function to get the OTP as a string
+
+
+    function getOTP() {
+        const otp = Array.from(otpInputs).map(input => input.value).join('');
+        console.log(otp);
+        return otp;
+    }
+
+    // Example usage: Get OTP and check validity
+    function validateOTP() {
+        const otp = getOTP();
+        if (otp.length === 6 && /^\d{6}$/.test(otp)) {
+            alert('OTP is valid: ' + otp);
+        } else {
+            alert('Please enter a valid 6-digit OTP');
+        }
+    }
+
+    // For testing: Validate OTP when pressing "Enter"
+    otpInputs[otpInputs.length - 1].addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            validateOTP();
+        }
+    });
+</script>
+
+</body>
+</html>
